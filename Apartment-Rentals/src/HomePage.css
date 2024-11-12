@@ -1,0 +1,57 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: black;
+}
+
+/*Elements*/
+/*Nav*/
+nav {
+    background-color: #384B70;
+    color: white;
+    text-align: center;
+    /* padding: 10px; */
+    /* position: fixed; */
+    top: 0;
+    width: 100%;
+    display: flex;
+
+}
+
+nav img {
+    width: 90px;
+    height: 50px;
+}
+/*footer*/
+footer{
+    background-color: #384B70;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+/*Id's*/
+#hero{
+    display: flex;
+
+}
+
+/*Classes*/
+.flat-container {
+    background-color: #507687;
+    width: 100px;
+    height: 100px;
+}
+.Sidebar{
+    background-color:  #384B70;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    top: 50px;
+    width: 200px;
+    height: 100%;
+}
