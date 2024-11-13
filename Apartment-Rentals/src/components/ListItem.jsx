@@ -11,14 +11,12 @@ import DetailBtn from './listItemComponents/DetailBtn'
 import FavBtn from './listItemComponents/FavBtn'
 import EditBtn from './listItemComponents/EditBtn'
 
-const ListItem = ({ apartments, setApartments }) => {
-console.log(apartments)
+const ListItem = ({ currentApartment, setApartments }) => {
+console.log('##' , currentApartment )
     return (
       <section className='flat-container'>
-        {apartments.map((currentApartment) => (
-            <div key={currentApartment.id}>
-                <h1>Hello</h1>
-            {/* <div>
+                <h1></h1>
+             <div>
                         <PictureCard currentApartment={currentApartment} />
                     </div>
                     <div>
@@ -44,9 +42,9 @@ console.log(apartments)
                             <FavBtn currentApartment={currentApartment} />
                             <EditBtn currentApartment={currentApartment} />
                         </div>
-                    </div>*/}
-          </div>
-        ))}
+                    </div>
+
+
       </section>
     );
 };
