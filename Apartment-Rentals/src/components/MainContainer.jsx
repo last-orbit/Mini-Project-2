@@ -2,8 +2,7 @@ import React from 'react';
 
 const MainContainer = () => {
   return (
-    <section>
-      <div className='flat-container'>
+    <section className='flat-container'>
         <div>
           {/* image div */}
           <img src='' alt='flat image' />
@@ -41,7 +40,7 @@ const MainContainer = () => {
           </div>
         </div>
         <div>
-          {/* column 3 */}
+          {/* column 3 */ }
           <div>
             <h4>Price Per Night</h4>
             <p>Min Nights</p>
@@ -58,7 +57,6 @@ const MainContainer = () => {
             <button></button>
           </div>
         </div>
-      </div>
     </section>
   );
 };

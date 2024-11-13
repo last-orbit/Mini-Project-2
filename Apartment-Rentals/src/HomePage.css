@@ -24,18 +24,10 @@ nav img {
     height: 50px;
 }
 /*footer*/
-footer{
-    background-color: #384B70;
-    color: white;
-    text-align: center;
-    padding: 10px;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-}
 /*Id's*/
 #hero{
     display: flex;
+    background-color: #507687;
 
 }
 
@@ -50,8 +42,19 @@ footer{
     color: white;
     text-align: center;
     padding: 10px;
-    position: fixed;
-    top: 50px;
+    /* position: fixed; */
+    top: 40px;
     width: 200px;
     height: 100%;
+    display: flex;
+}
+
+.footer{
+    background-color: #384B70;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
 }

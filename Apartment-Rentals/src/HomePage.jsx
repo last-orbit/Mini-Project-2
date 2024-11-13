@@ -7,16 +7,12 @@ import MainContainer from './components/MainContainer';
 const HomePage = () => {
   return (
     <>
-      <nav>
-        <Navbar />
-      </nav>
-      <section id='hero'>
+      <Navbar />
+      <section>
         <Sidebar />
         <MainContainer />
       </section>
-      <footer>
-        <Footer />
-      </footer>
+      <Footer />
     </>
   );
 };
