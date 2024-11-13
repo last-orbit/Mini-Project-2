@@ -25,7 +25,7 @@ nav img {
 }
 /*footer*/
 /*Id's*/
-#hero{
+.hero{
     display: flex;
     background-color: #507687;
 

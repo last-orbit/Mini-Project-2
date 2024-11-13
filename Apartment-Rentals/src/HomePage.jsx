@@ -2,15 +2,15 @@ import './HomePage.css';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import Sidebar from './components/Sidebar';
-import MainContainer from './components/MainContainer';
+import ListContainer from './components/ListContainer';
 
 const HomePage = () => {
   return (
     <>
       <Navbar />
-      <section>
+      <section className='hero'>
         <Sidebar />
-        <MainContainer />
+        <ListContainer />
       </section>
       <Footer />
     </>
