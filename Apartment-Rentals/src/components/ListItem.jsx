@@ -25,10 +25,10 @@ const ListItem = ({ currentApartment, setApartments }) => {
       <div className="info-container">
         <h3>{currentApartment.name}</h3>
         <h4>
-          {currentApartment.neighbourhood},{" "}
-          <span className="neighbourhood-light">
-            {currentApartment.neighbourhood_cleansed}
-          </span>
+          {/* {currentApartment.neighbourhood},{" "}
+          <span className="neighbourhood-light"> */}
+          {currentApartment.neighbourhood_cleansed}
+          {/* </span> */}
         </h4>
         <div className="amenities-tag">
           <label>

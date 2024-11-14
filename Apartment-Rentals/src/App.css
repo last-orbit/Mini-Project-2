@@ -110,6 +110,11 @@ nav img {
   margin-top: 10px;
 }
 
+.amenities-tag {
+  display: flex;
+  justify-content: center;
+}
+
 .info-container .amenities-tag {
   margin-top: 15px;
 }
@@ -143,6 +148,11 @@ nav img {
 h3 {
   color: var(--darkBlue);
   text-transform: uppercase;
+  text-align: left;
+}
+h4 {
+  color: var(--lightBlue);
+  text-transform: capitalize;
   text-align: left;
 }
 
