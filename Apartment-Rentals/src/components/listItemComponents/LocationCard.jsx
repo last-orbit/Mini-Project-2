@@ -1,10 +1,17 @@
 import React from "react";
 
-const LocationCard = () => {
+const LocationCard = ({ currentApartment }) => {
   return (
     <div className="location-card">
-      <h4>data neighbourhood, data neighbourhood_cleansed</h4>
-      <p>data latitude ; data longitude</p>
+      <h4>
+        {currentApartment.neighbourhood},{" "}
+        <span className="neighbourhood-light">
+          {currentApartment.neighbourhood_cleansed}
+        </span>
+      </h4>
+      <p>
+        {currentApartment.latitude} , {currentApartment.longitude}
+      </p>
     </div>
   );
 };

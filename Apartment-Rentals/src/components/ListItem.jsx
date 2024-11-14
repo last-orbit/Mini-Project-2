@@ -15,33 +15,40 @@ const ListItem = ({ currentApartment, setApartments }) => {
   console.log("##", currentApartment);
   return (
     <section className="list-item">
-      <h1></h1>
-      <div>
+      <div className="picture-container">
+        <div className="price-tag">
+          <h4>{currentApartment.price}</h4>
+          <h5>{currentApartment.review_scores_rating}/5</h5>
+        </div>
         <PictureCard currentApartment={currentApartment} />
       </div>
-      <div>
-        <div>
-          <NameCard currentApartment={currentApartment} />
-          <HostCard currentApartment={currentApartment} />
-          <LocationCard currentApartment={currentApartment} />
+      <div className="info-container">
+        <h3>{currentApartment.name}</h3>
+        <h4>
+          {currentApartment.neighbourhood},{" "}
+          <span className="neighbourhood-light">
+            {currentApartment.neighbourhood_cleansed}
+          </span>
+        </h4>
+        <div className="amenities-tag">
+          <label>
+            <i class="fa-solid fa-users"></i>
+            {currentApartment.accommodates}
+          </label>
+          <label>
+            <i class="fa-solid fa-bed"></i>
+            {currentApartment.beds}
+          </label>
+          <label>
+            <i class="fa-solid fa-bath"></i>
+            {currentApartment.bathrooms}
+          </label>
         </div>
       </div>
-      <div>
-        <div>
-          <DescriptionCard currentApartment={currentApartment} />
-          <AmenityCard currentApartment={currentApartment} />
-        </div>
-      </div>
-      <div>
-        <div>
-          <PriceCard currentApartment={currentApartment} />
-          <ReviewCard currentApartment={currentApartment} />
-        </div>
-        <div className="btn-container">
-          <DetailBtn currentApartment={currentApartment} />
-          <FavBtn currentApartment={currentApartment} />
-          <EditBtn currentApartment={currentApartment} />
-        </div>
+      <div className="btn-container">
+        <DetailBtn currentApartment={currentApartment} />
+        <FavBtn currentApartment={currentApartment} />
+        <EditBtn currentApartment={currentApartment} />
       </div>
     </section>
   );

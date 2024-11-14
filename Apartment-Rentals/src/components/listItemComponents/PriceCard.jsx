@@ -1,12 +1,10 @@
 import React from "react";
 
-const PriceCard = () => {
+const PriceCard = ({ currentApartment }) => {
   return (
     <div className="price-card">
-      <h4>Price Per Night</h4>
-      <p>Min Nights</p>
-      <p>/</p>
-      <p>Max Nights</p>
+      <h4>{currentApartment.price}</h4>
+      <p>{currentApartment.minimum_nights} nights min</p>
     </div>
   );
 };

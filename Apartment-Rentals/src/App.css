@@ -70,7 +70,8 @@ nav img {
 
 .home-page {
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
   background-color: var(--grey);
   width: 100%;
 }
@@ -80,18 +81,55 @@ nav img {
   box-shadow: 10px 10px 10px rgba(128, 128, 128, 0.1);
   border: 0.1px solid rgba(128, 128, 128, 0.2);
   border-radius: 20px;
-  width: 98%;
-  height: 280px;
-  margin: 10px;
+  width: 320px;
+  height: 420px;
+  margin: 10px 10px 15px 10px;
   padding: 20px;
-
+  position: relative;
   display: flex;
-  align-items: center;
+  flex-direction: column;
 }
 
 .list-item img {
-  height: 240px;
-  border-radius: 10px 0 0 10px;
+  width: 280px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 10px 10px 0 0;
+}
+
+.picture-container {
+  position: relative;
+}
+
+.info-container {
+  width: 280px;
+  height: 180px;
+}
+
+.info-container h3 {
+  margin-top: 10px;
+}
+
+.info-container .amenities-tag {
+  margin-top: 15px;
+}
+
+.amenities-tag label {
+  background-color: var(--lightBlue);
+  padding: 5px;
+  margin: 2px;
+  color: var(--white);
+  font-weight: 700;
+  border-radius: 5px;
+}
+
+.amenities-tag i {
+  color: var(--white);
+  padding-right: 5px;
+}
+
+.info-container h4 {
+  margin-top: 5px;
 }
 
 .name-card {
@@ -104,6 +142,13 @@ nav img {
 
 h3 {
   color: var(--darkBlue);
+  text-transform: uppercase;
+  text-align: left;
+}
+
+.neighbourhood-light {
+  font-weight: 300;
+  font-style: italic;
 }
 
 h5 {
@@ -113,6 +158,7 @@ h5 {
 a {
   color: var(--darkBlue);
 }
+
 .host-card {
   display: flex;
   flex-direction: column;
@@ -129,12 +175,30 @@ a {
   padding: 10px;
 }
 
+.location-card p {
+  font-size: 12px;
+}
+
 .description-card {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   margin: 10px;
   padding: 10px;
+}
+
+.property-type {
+  padding: 10px;
+  margin-top: 10px;
+  background-color: var(--darkBlue);
+  font-size: 14px;
+  border-radius: 5px;
+  color: var(--white);
+}
+
+.property-type i {
+  color: white;
+  margin-right: 5px;
 }
 
 .amenity-card {
@@ -153,6 +217,36 @@ a {
   padding: 10px;
 }
 
+.price-card p {
+  font-size: 12px;
+}
+
+.price-tag {
+  margin: 10px;
+  padding: 5px 15px;
+  position: absolute;
+  top: 5px;
+  right: 5px;
+
+  background-color: var(--darkBlue);
+  opacity: 0.9;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.price-tag h4,
+h5 {
+  color: white;
+}
+
+.price-tag h5 {
+  color: white;
+  font-weight: 300;
+  font-size: 0.6em;
+}
+
 .review-card {
   display: flex;
   flex-direction: column;
@@ -163,12 +257,26 @@ a {
 
 .btn-container {
   display: flex;
-  flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
+  justify-content: center;
   margin: 10px;
-  padding: 10px;
+  padding: 20px;
+  transform: translateX(25%);
+  position: absolute;
+  bottom: -20px;
 }
 
 .btn-round {
   background-color: var(--red);
+  padding: 5px;
+  margin: 3px;
+  border: none;
+  border-radius: 20px;
+  width: 40px;
+  height: 40px;
+  color: var(--white);
+}
+
+.btn-round i {
+  color: var(--white);
 }
