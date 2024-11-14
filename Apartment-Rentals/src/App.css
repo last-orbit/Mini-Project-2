@@ -4,12 +4,18 @@
   box-sizing: border-box;
   color: black;
   font-family: Arial, Helvetica, sans-serif;
+
+  --darkBlue: #384b70;
+  --lightBlue: #507687;
+  --red: #b8001f;
+  --grey: #f6f6f6;
+  --white: white;
 }
 
 /*Elements*/
 /*Nav*/
 nav {
-  background-color: #384b70;
+  background-color: var(--darkBlue);
   color: white;
   text-align: center;
   /* padding: 10px; */
@@ -27,12 +33,12 @@ nav img {
 /*Id's*/
 .hero {
   display: flex;
-  background-color: #507687;
+  background-color: var(--lightBlue);
 }
 
 /*Classes*/
-.Sidebar {
-  background-color: #384b70;
+.sidebar {
+  background-color: var(--darkBlue);
   color: white;
   text-align: center;
   padding: 10px;
@@ -40,10 +46,20 @@ nav img {
   top: 40px;
   width: 200px;
   display: flex;
+  flex-direction: column;
+}
+
+.sidebar button {
+  padding: 10px;
+  text-transform: uppercase;
+  font-size: 16px;
+  color: var(--white);
+  background: none;
+  border: none;
 }
 
 .footer {
-  background-color: #384b70;
+  background-color: var(--darkBlue);
   color: white;
   text-align: center;
   padding: 10px;
@@ -55,12 +71,14 @@ nav img {
 .list-container {
   display: flex;
   flex-direction: column;
-  background-color: white;
+  background-color: var(--grey);
   width: 100%;
 }
 
 .list-item {
-  background-color: #507687;
+  background-color: var(--white);
+  box-shadow: 10px 10px 10px rgba(128, 128, 128, 0.1);
+  border: 0.1px solid rgba(128, 128, 128, 0.2);
   border-radius: 20px;
   width: 98%;
   height: 280px;
@@ -68,10 +86,12 @@ nav img {
   padding: 20px;
 
   display: flex;
+  align-items: center;
 }
 
 .list-item img {
-  height: 200px;
+  height: 240px;
+  border-radius: 10px 0 0 10px;
 }
 
 .name-card {
@@ -83,13 +103,15 @@ nav img {
 }
 
 h3 {
-  color: white;
+  color: var(--darkBlue);
 }
 
 h5 {
+  color: var(--darkBlue);
 }
 
 a {
+  color: var(--darkBlue);
 }
 .host-card {
   display: flex;
@@ -148,4 +170,5 @@ a {
 }
 
 .btn-round {
+  background-color: var(--red);
 }
