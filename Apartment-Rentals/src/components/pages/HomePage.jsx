@@ -1,12 +1,12 @@
-import React, { useState } from "react";
-import ListItem from "./ListItem";
-import ApartmentBase from "../assets/Data.json";
+import React, { useState } from 'react';
+import ListItem from '../ListItem';
+import ApartmentBase from '../../assets/Data.json';
 
-const ListContainer = () => {
+const HomePage = () => {
   const [apartments, setApartments] = useState(ApartmentBase.results);
   console.log(apartments);
   return (
-    <div className="list-container">
+    <div className='home-page'>
       {apartments.map((apartment) => (
         <div key={apartment.id}>
           {/* <h1>{apartment.name}</h1> */}
@@ -20,4 +20,4 @@ const ListContainer = () => {
   );
 };
 
-export default ListContainer;
+export default HomePage;

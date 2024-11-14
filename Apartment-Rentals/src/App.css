@@ -68,7 +68,7 @@ nav img {
   width: 100%;
 }
 
-.list-container {
+.home-page {
   display: flex;
   flex-direction: column;
   background-color: var(--grey);

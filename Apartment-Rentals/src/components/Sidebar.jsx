@@ -1,16 +1,23 @@
-import React from "react";
-import SavedFlat from "./SavedFlats";
-import AddFlats from "./AddFlats";
-import About from "./About";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import React from 'react';
+import { NavLink } from 'react-router-dom';
 
 const Sidebar = () => {
   return (
-    <section className="sidebar">
-      <button>All Flats</button>
-      <button>Saved Flats</button>
-      <button>Add a Flat</button>
-      <button>About Us</button>
+    <section className='sidebar'>
+      <NavLink to='/' className={'sidebar-actions'}>
+        {' '}
+        <button>All Flats</button>
+      </NavLink>
+      <NavLink to='/saved-flats'>
+        <button>Saved Flats</button>
+      </NavLink>
+      <NavLink to='/add-flats'>
+        <button>Add a Flat</button>
+      </NavLink>
+      <NavLink to='/about-us'>
+        <button>About Us</button>{' '}
+      </NavLink>
+
       {/* <SavedFlat />
       <AddFlats />
       <About /> */}
