@@ -1,9 +1,9 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
-import HomePage from './HomePage'
+import App from './App'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <HomePage />
+    <App />
   </StrictMode>,
 )
