@@ -37,7 +37,7 @@ const ListItem = ({ currentApartment, setApartments }) => {
           <PriceCard currentApartment={currentApartment} />
           <ReviewCard currentApartment={currentApartment} />
         </div>
-        <div>
+        <div className="btn-container">
           <DetailBtn currentApartment={currentApartment} />
           <FavBtn currentApartment={currentApartment} />
           <EditBtn currentApartment={currentApartment} />
