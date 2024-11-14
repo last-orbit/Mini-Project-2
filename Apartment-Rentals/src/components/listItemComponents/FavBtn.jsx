@@ -1,9 +1,7 @@
-import React from 'react'
+import React from "react";
 
 const FavBtn = () => {
-  return (
-    <button></button>
-  )
-}
+  return <button className="btn-round"></button>;
+};
 
-export default FavBtn
+export default FavBtn;

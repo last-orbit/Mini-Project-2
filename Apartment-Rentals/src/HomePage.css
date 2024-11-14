@@ -1,60 +1,151 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    color: black;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: black;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 /*Elements*/
 /*Nav*/
 nav {
-    background-color: #384B70;
-    color: white;
-    text-align: center;
-    /* padding: 10px; */
-    /* position: fixed; */
-    top: 0;
-    width: 100%;
-    display: flex;
-
+  background-color: #384b70;
+  color: white;
+  text-align: center;
+  /* padding: 10px; */
+  /* position: fixed; */
+  top: 0;
+  width: 100%;
+  display: flex;
 }
 
 nav img {
-    width: 90px;
-    height: 50px;
+  width: 90px;
+  height: 50px;
 }
 /*footer*/
 /*Id's*/
-.hero{
-    display: flex;
-    background-color: #507687;
-
+.hero {
+  display: flex;
+  background-color: #507687;
 }
 
 /*Classes*/
-.flat-container {
-    background-color: #507687;
-    width: 100px;
-    height: 100px;
-}
-.Sidebar{
-    background-color:  #384B70;
-    color: white;
-    text-align: center;
-    padding: 10px;
-    /* position: fixed; */
-    top: 40px;
-    width: 200px;
-    height: 100%;
-    display: flex;
+.Sidebar {
+  background-color: #384b70;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  /* position: fixed; */
+  top: 40px;
+  width: 200px;
+  display: flex;
 }
 
-.footer{
-    background-color: #384B70;
-    color: white;
-    text-align: center;
-    padding: 10px;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
+.footer {
+  background-color: #384b70;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+.list-container {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  width: 100%;
+}
+
+.list-item {
+  background-color: #507687;
+  border-radius: 20px;
+  width: 98%;
+  height: 280px;
+  margin: 10px;
+  padding: 20px;
+
+  display: flex;
+}
+
+.list-item img {
+  height: 200px;
+}
+
+.name-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin: 10px;
+  padding: 10px;
+}
+
+h3 {
+  color: white;
+}
+
+h5 {
+}
+
+a {
+}
+.host-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin: 10px;
+  padding: 10px;
+}
+
+.location-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin: 10px;
+  padding: 10px;
+}
+
+.description-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin: 10px;
+  padding: 10px;
+}
+
+.amenity-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin: 10px;
+  padding: 10px;
+}
+
+.price-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin: 10px;
+  padding: 10px;
+}
+
+.review-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin: 10px;
+  padding: 10px;
+}
+
+.btn-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin: 10px;
+  padding: 10px;
+}
+
+.btn-round {
 }

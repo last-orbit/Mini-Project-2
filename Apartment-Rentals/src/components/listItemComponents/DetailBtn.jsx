@@ -1,9 +1,7 @@
-import React from 'react'
+import React from "react";
 
 const DetailBtn = () => {
-  return (
-    <button></button>
-  )
-}
+  return <button className="btn-round"></button>;
+};
 
-export default DetailBtn
+export default DetailBtn;
