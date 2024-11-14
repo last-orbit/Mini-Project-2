@@ -5,7 +5,7 @@ const NameCard = ({currentApartment}) => {
     <div>
       <h3>{currentApartment.name}</h3>
       <h5>{currentApartment.id}</h5>
-      <p>{currentApartment.picture_url}</p>
+      <p>{currentApartment.listing_url}</p>
     </div>
   );
 }
