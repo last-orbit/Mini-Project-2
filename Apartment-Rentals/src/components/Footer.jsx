@@ -2,8 +2,10 @@ import React from 'react'
 
 const Footer = () => {
   return (
-    <div className='footer'>HomeMate</div>
-  )
+    <div className='footer'>
+      <p>HomeMate</p>
+    </div>
+  );
 }
 
 export default Footer

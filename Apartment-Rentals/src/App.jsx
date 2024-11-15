@@ -18,8 +18,8 @@ const App = () => {
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/saved-flats" element={<SavedFlat />} />
-          <Route path="/add-flat" element={<AddFlats />} />
-          <Route path="/about" element={<About />} />
+          <Route path="/add-flats" element={<AddFlats />} />
+          <Route path="/about-us" element={<About />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </section>

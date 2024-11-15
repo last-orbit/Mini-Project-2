@@ -19,7 +19,8 @@ nav {
   color: white;
   text-align: center;
   /* padding: 10px; */
-  /* position: fixed; */
+  /* position: fixed;
+  z-index: 1;  position and z-index works but we will have to change the styling for both homepage*/
   top: 0;
   width: 100%;
   display: flex;
@@ -48,6 +49,7 @@ nav img {
   width: 200px;
   display: flex;
   flex-direction: column;
+  /* position: fixed; */
 }
 
 .sidebar button {
@@ -57,17 +59,24 @@ nav img {
   color: var(--white);
   background: none;
   border: none;
+  cursor: pointer;
 }
 
 .footer {
   background-color: var(--darkBlue);
   color: white;
-  text-align: center;
-  padding: 10px;
   position: fixed;
   bottom: 0;
   width: 100%;
-  height: 5vh;
+  height: 6vh;
+  display: flex;
+  align-items: center;
+}
+
+.footer p {
+  font-size: 0.9em;
+  margin: 0 auto;
+  color: var(--white);
 }
 
 .main-container {
@@ -295,4 +304,70 @@ h5 {
 
 .btn-round i {
   color: var(--white);
+}
+/****************Not Found Page********************/
+.not-found-page{
+ height: 85vh;
+ margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 85%;
+  text-align: center;
+
+}
+
+.not-found-page h1{
+  font-size: 3em;
+    color: var(--white);
+
+}
+
+.not-found-page p{
+  font-size: 1.5em;
+  color: var(--white);
+  margin-top: 30px;
+}
+
+.not-found-page a{
+  color: var(--white);
+  margin: 30px auto;
+  width: 14%;
+}
+
+/****************About us Page********************/
+.about-us-page{
+  height: 85vh;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: var(--white);
+  width: 84%;
+  text-align: center;
+  line-height: 30px;
+}
+
+.about-us-page img{
+  width: 125px;
+  height: 65px;
+margin: 0px auto;
+}
+
+.about-us-page span{
+  font-weight: 600;
+    color: var(--white);
+}
+
+.about-us-page p{
+  font-size: 1.2em;
+  color: var(--white);
+}
+
+.about-us-page a{
+  color: var(--white);
+}
+
+.about-us-page a:hover{
+  color: var(--darkBlue);
 }
