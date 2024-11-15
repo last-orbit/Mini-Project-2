@@ -13,8 +13,8 @@ const App = () => {
   return (
     <BrowserRouter>
       <Navbar />
-      <Sidebar />
       <section className='hero'>
+      <Sidebar />
         <Routes>
           <Route path='/' element={<HomePage />} />
           <Route path='/saved-flats' element={<SavedFlat />} />
