@@ -1,9 +1,7 @@
-import React from 'react'
+import React from "react";
 
 const AddFlats = () => {
-  return (
-    <div>AddFlats</div>
-  )
-}
+  return <div className="main-container">AddFlats</div>;
+};
 
-export default AddFlats
+export default AddFlats;
