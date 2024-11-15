@@ -1,10 +1,9 @@
 import React from "react";
 
-const ReviewCard = () => {
+const ReviewCard = ({ currentApartment }) => {
   return (
     <div className="review-card">
-      <h4>Review Score</h4>
-      <p>Numbers of reviews</p>
+      <h4>{currentApartment.review_scores_rating} / 5</h4>
     </div>
   );
 };

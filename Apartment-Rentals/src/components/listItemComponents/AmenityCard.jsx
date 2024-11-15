@@ -1,16 +1,26 @@
 import React from "react";
 
-const AmenityCard = () => {
+const AmenityCard = ({ currentApartment }) => {
+  const amenitiesList = currentApartment.amenities.join(", ");
+
   return (
     <div className="amenity-card">
       <div>
-        <label>Nb of Accommodates</label>
-        <label>Nb of Rooms</label>
-        <label>Nb of Beds</label>
-        <label>Nb of Bathrooms</label>
+        <label>
+          <i class="fa-solid fa-users"></i>
+          {currentApartment.accommodates}
+        </label>
+        <label>
+          <i class="fa-solid fa-bed"></i>
+          {currentApartment.beds}
+        </label>
+        <label>
+          <i class="fa-solid fa-bath"></i>
+          {currentApartment.bathrooms}
+        </label>
       </div>
       <h4>Amenities</h4>
-      <p>amenities list</p>
+      <p>{amenitiesList}</p>
     </div>
   );
 };

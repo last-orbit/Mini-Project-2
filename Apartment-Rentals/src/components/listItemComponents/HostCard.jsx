@@ -1,11 +1,11 @@
 import React from "react";
 
-const HostCard = () => {
+const HostCard = ({ currentApartment }) => {
   return (
     <div className="host-card">
-      <h4>data host_name</h4>
-      <h5>ID - data host_id</h5>
-      <p>data host_url</p>
+      <h4>{currentApartment.host_name} </h4>
+      <h5>ID - {currentApartment.host_id} </h5>
+      <a href="{ currentApartment.host_url }">See host's profile</a>
     </div>
   );
 };

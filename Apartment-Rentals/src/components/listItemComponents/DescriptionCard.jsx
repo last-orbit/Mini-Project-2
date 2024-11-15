@@ -1,12 +1,16 @@
 import React from "react";
 
-const DescriptionCard = () => {
+const DescriptionCard = ({ currentApartment }) => {
   return (
     <div className="description-card">
       <h4>Description</h4>
-      <p>data description</p>
-      <h5>data property_type</h5>
-      <h5>data room_type</h5>
+      <p>{currentApartment.description}</p>
+      <label className="property-type">
+        <i class="fa-solid fa-house"></i>
+        {currentApartment.property_type}
+      </label>
+
+      {/* <h5>{currentApartment.room_type}</h5> */}
     </div>
   );
 };
