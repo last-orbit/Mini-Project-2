@@ -11,8 +11,8 @@ import DetailBtn from "./listItemComponents/DetailBtn";
 import FavBtn from "./listItemComponents/FavBtn";
 import EditBtn from "./listItemComponents/EditBtn";
 
-const ListItem = ({ currentApartment, setApartments }) => {
-  console.log("##", currentApartment);
+const ListItem = ({ currentApartment }) => {
+  // console.log("##", currentApartment);
   return (
     <section className="list-item">
       <div className="picture-container">
