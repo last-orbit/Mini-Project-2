@@ -14,6 +14,7 @@ import React, { useState } from "react";
 
 const App = () => {
   const [apartments, setApartments] = useState(ApartmentBase.results);
+  const [favoriteFlats, setFavoriteFlats] = useState([]);
 
   //Submit Handler
 
@@ -21,14 +22,40 @@ const App = () => {
     setApartments((prev) => [...prev, newApartment]);
   };
 
+  // Managing favorites
+  function addToFav(id) {
+    console.log(`Flat with id ${id} has been added to favorites`);
+    let favoriteFlat;
+    const filteredFlats = apartments.filter((apartment) => {
+      if (apartment.id === id) {
+        // In that case it removes the fav from the array
+        favoriteFlat = apartment;
+        return false;
+      }
+      return true;
+    });
+    //Removing the flat from the main list
+    setApartments(filteredFlats); // To see with Joshua change the button color instead of removing the item from the main list
+    setFavoriteFlats([favoriteFlat, ...favoriteFlats]);
+    console.log(favoriteFlats);
+  }
+
   return (
     <BrowserRouter>
       <Navbar />
       <section className="hero">
         <Sidebar />
         <Routes>
-          <Route path="/" element={<HomePage apartments={apartments} />} />
-          <Route path="/saved-flats" element={<SavedFlat />} />
+          <Route
+            path="/"
+            element={<HomePage apartments={apartments} addToFav={addToFav} />}
+          />
+          <Route
+            path="/saved-flats"
+            element={
+              <SavedFlat favoriteFlats={favoriteFlats} addToFav={addToFav} />
+            }
+          />
           <Route
             path="/add-flats"
             element={<AddFlats handleAddApartment={handleAddApartment} />}

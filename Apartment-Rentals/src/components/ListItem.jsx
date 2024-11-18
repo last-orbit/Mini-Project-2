@@ -1,24 +1,27 @@
 import React from "react";
 import PictureCard from "./listItemComponents/PictureCard";
-import NameCard from "./listItemComponents/NameCard";
-import HostCard from "./listItemComponents/HostCard";
-import LocationCard from "./listItemComponents/LocationCard";
-import DescriptionCard from "./listItemComponents/DescriptionCard";
-import AmenityCard from "./listItemComponents/AmenityCard";
-import PriceCard from "./listItemComponents/PriceCard";
-import ReviewCard from "./listItemComponents/ReviewCard";
+
 import DetailBtn from "./listItemComponents/DetailBtn";
 import FavBtn from "./listItemComponents/FavBtn";
-import EditBtn from "./listItemComponents/EditBtn";
 
-const ListItem = ({ currentApartment }) => {
+const ListItem = ({ currentApartment, addToFav }) => {
   // console.log("##", currentApartment);
+
   return (
     <section className="list-item">
       <div className="picture-container">
         <div className="price-tag">
           <h4>{currentApartment.price}</h4>
           <h5>{currentApartment.review_scores_rating}/5</h5>
+        </div>
+        <div className="fav-btn">
+          <button
+            className="btn-round"
+            title="I like it!"
+            onClick={() => addToFav(currentApartment.id)}
+          >
+            <i class="fa-solid fa-star"></i>
+          </button>
         </div>
         <PictureCard currentApartment={currentApartment} />
       </div>
@@ -45,11 +48,7 @@ const ListItem = ({ currentApartment }) => {
           </label>
         </div>
       </div>
-      <div className="btn-container">
-        <DetailBtn currentApartment={currentApartment} />
-        <FavBtn currentApartment={currentApartment} />
-        <EditBtn currentApartment={currentApartment} />
-      </div>
+      <DetailBtn />
     </section>
   );
 };

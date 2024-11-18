@@ -1,17 +1,20 @@
 import React, { useState } from "react";
 import ListItem from "../ListItem";
 
-const HomePage = ({ apartments }) => {
+const HomePage = ({ apartments, addToFav }) => {
   // console.log(apartments);
 
   return (
-    <div className="home-page main-container">
-      {apartments.map((apartment) => (
-        <div key={apartment.id}>
-          {/* <h1>{apartment.name}</h1> */}
-          <ListItem currentApartment={apartment} />
-        </div>
-      ))}
+    <div className="main-container">
+      <h1>All Flats</h1>
+      <div className="home-page">
+        {apartments.map((apartment) => (
+          <div key={apartment.id}>
+            {/* <h1>{apartment.name}</h1> */}
+            <ListItem currentApartment={apartment} addToFav={addToFav} />
+          </div>
+        ))}
+      </div>
     </div>
   );
 };
