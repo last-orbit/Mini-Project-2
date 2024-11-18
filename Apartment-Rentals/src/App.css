@@ -473,3 +473,31 @@ form button {
 .about-us-page a:hover {
   color: var(--darkBlue);
 }
+
+
+/****************Detail Page********************/
+.detail-page {
+  height: 85vh;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 85%;
+  text-align: center;
+  align-items: center;
+  background-color: white;
+}
+
+.detail-image {
+  width: 30%;
+  height: 35vh;
+  object-fit: cover;
+  border-radius: 10px 10px 0 0;
+
+}
+
+.detail-bth{
+  position: fixed;
+  bottom: 40px;
+}
+

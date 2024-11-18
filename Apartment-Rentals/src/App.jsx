@@ -7,10 +7,10 @@ import SavedFlat from "./components/pages/SavedFlats";
 import AddFlats from "./components/pages/AddFlats";
 import About from "./components/pages/About";
 import NotFound from "./components/Pages/NotFound";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
-
 import ApartmentBase from "./assets/Data.json";
+import DetailPage from "./components/pages/DetailPage";
 import React, { useState } from "react";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 const App = () => {
   const [apartments, setApartments] = useState(ApartmentBase.results);
@@ -35,6 +35,7 @@ const App = () => {
           />
           <Route path="/about-us" element={<About />} />
           <Route path="*" element={<NotFound />} />
+          <Route path="/detail-page/:apartmentId" element={<DetailPage apartments={apartments} />} />
         </Routes>
       </section>
       <Footer />
