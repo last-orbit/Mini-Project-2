@@ -131,6 +131,7 @@ const AddFlats = ({ handleAddApartment }) => {
               <input
                 type="number"
                 min={1}
+                max={5}
                 value={review_scores_rating}
                 onChange={(event) => setReviewScoresRating(event.target.value)}
               />
@@ -146,7 +147,9 @@ const AddFlats = ({ handleAddApartment }) => {
             />
             {/* <span class="checkmark"> </span> */}
           </div>
-          <button type="submit">Add this new flat!</button>
+          <button className="btn-blue" type="submit">
+            Add this new flat!
+          </button>
         </form>
       </div>
     </div>

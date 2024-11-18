@@ -88,14 +88,16 @@ nav img {
 
 .main-container {
   height: 85vh;
+  background-color: var(--grey);
+  width: 100%;
 }
 
 .home-page {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  background-color: var(--grey);
   width: 100%;
+  background-color: var(--grey);
 }
 
 /*-------- LIST-ITEM ------------ */
@@ -144,7 +146,7 @@ nav img {
 }
 
 .amenities-tag label {
-  background-color: var(--lightBlue);
+  background-color: var(--darkBlue);
   padding: 5px;
   margin: 2px;
   color: var(--white);
@@ -169,7 +171,7 @@ nav img {
   right: 5px;
 
   background-color: var(--darkBlue);
-  opacity: 0.9;
+  opacity: 0.95;
   border-radius: 5px;
   display: flex;
   flex-direction: column;
@@ -185,6 +187,13 @@ h5 {
   color: white;
   font-weight: 300;
   font-size: 0.6em;
+}
+
+.fav-btn {
+  margin: 5px;
+  position: absolute;
+  bottom: 5px;
+  right: 5px;
 }
 
 .review-card {
@@ -219,6 +228,18 @@ h5 {
 
 .btn-round i {
   color: var(--white);
+}
+
+.btn-blue {
+  background-color: #384b70;
+  color: #f6f6f6;
+  font-weight: 700;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-top: 20px;
+  height: 40px;
+  border: none;
+  border-radius: 5px;
 }
 /*-------- LIST-ITEM ------------ */
 
@@ -394,17 +415,6 @@ a {
 .form-checkbox-container input {
   height: 25px;
   width: 25px;
-}
-
-form button {
-  background-color: #384b70;
-  color: #f6f6f6;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  margin-top: 20px;
-  height: 40px;
-  border: none;
-  border-radius: 5px;
 }
 
 /*--------- ADD FLAT FORM------------*/
