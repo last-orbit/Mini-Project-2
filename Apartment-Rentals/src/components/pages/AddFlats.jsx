@@ -83,50 +83,69 @@ const AddFlats = ({ handleAddApartment }) => {
             onChange={(event) => setPicture(event.target.value)}
             placeholder="Url please !"
           />
-          <label>Number of guests</label>
-          <input
-            type="number"
-            min={1}
-            value={accommodates}
-            onChange={(event) => setAccommodates(event.target.value)}
-            placeholder="The more fools, the merrier"
-          />
-          <label>Number of beds</label>
-          <input
-            type="number"
-            min={1}
-            value={beds}
-            onChange={(event) => setBeds(event.target.value)}
-            placeholder="Please don't make me sleep on the floor!"
-          />
-          <label>Number of bathrooms</label>
-          <input
-            type="number"
-            min={1}
-            value={bathrooms}
-            onChange={(event) => setBathrooms(event.target.value)}
-            placeholder="I love to sing naked"
-          />
-          <label>Price per night</label>
-          <input
-            type="number"
-            min={1}
-            value={price}
-            onChange={(event) => setPrice(event.target.value)}
-          />
-          <label>Reviews</label>
-          <input
-            type="number"
-            min={1}
-            value={review_scores_rating}
-            onChange={(event) => setReviewScoresRating(event.target.value)}
-          />
-          <label>This flat is available</label>
-          <input
-            type="checkbox"
-            value={has_availability}
-            onChange={(event) => setHasAvailability(event.target.value)}
-          />
+          <div className="form-number-container">
+            <div>
+              <label>Number of guests</label>
+              <input
+                type="number"
+                min={1}
+                value={accommodates}
+                onChange={(event) => setAccommodates(event.target.value)}
+                placeholder="The more fools, the merrier"
+              />
+            </div>
+            <div>
+              <label>Number of beds</label>
+              <input
+                type="number"
+                value={beds}
+                onChange={(event) => setBeds(event.target.value)}
+                placeholder="Please don't make me sleep on the floor!"
+                min={1}
+              />
+            </div>
+            <div>
+              <label>Number of bathrooms</label>
+              <input
+                type="number"
+                min={1}
+                value={bathrooms}
+                onChange={(event) => setBathrooms(event.target.value)}
+                placeholder="I love to sing naked"
+              />
+            </div>
+          </div>
+
+          <div className="form-price-container">
+            <div>
+              <label>Price per night</label>
+              <input
+                type="number"
+                min={1}
+                value={price}
+                onChange={(event) => setPrice(event.target.value)}
+              />
+            </div>
+            <div>
+              <label>Reviews</label>
+              <input
+                type="number"
+                min={1}
+                value={review_scores_rating}
+                onChange={(event) => setReviewScoresRating(event.target.value)}
+              />
+            </div>
+            <span></span>
+          </div>
+          <div className="form-checkbox-container">
+            <label>This flat is available</label>
+            <input
+              type="checkbox"
+              value={has_availability}
+              onChange={(event) => setHasAvailability(event.target.value)}
+            />
+            {/* <span class="checkmark"> </span> */}
+          </div>
           <button type="submit">Add this new flat!</button>
         </form>
       </div>
