@@ -17,10 +17,6 @@ const Sidebar = () => {
       <NavLink to='/about-us'>
         <button>About Us</button>{' '}
       </NavLink>
-
-      {/* <SavedFlat />
-      <AddFlats />
-      <About /> */}
     </section>
   );
 };
