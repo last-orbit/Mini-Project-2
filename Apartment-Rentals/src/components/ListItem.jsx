@@ -1,8 +1,10 @@
 import React from "react";
 import PictureCard from "./listItemComponents/PictureCard";
-
+import DetailPage from "./pages/DetailPage";
 import DetailBtn from "./listItemComponents/DetailBtn";
 import FavBtn from "./listItemComponents/FavBtn";
+import { Link } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 const ListItem = ({ currentApartment, addToFav }) => {
   // console.log("##", currentApartment);
@@ -14,13 +16,13 @@ const ListItem = ({ currentApartment, addToFav }) => {
           <h4>{currentApartment.price}</h4>
           <h5>{currentApartment.review_scores_rating}/5</h5>
         </div>
-        <div className="fav-btn">
+        <div className='fav-btn'>
           <button
-            className="btn-round"
-            title="I like it!"
+            className='btn-round'
+            title='I like it!'
             onClick={() => addToFav(currentApartment.id)}
           >
-            <i class="fa-solid fa-star"></i>
+            <i class='fa-solid fa-star'></i>
           </button>
         </div>
         <PictureCard currentApartment={currentApartment} />
@@ -48,7 +50,15 @@ const ListItem = ({ currentApartment, addToFav }) => {
           </label>
         </div>
       </div>
-      <DetailBtn />
+      <Link to={`/detail-page/${currentApartment.id}`}>
+        <DetailBtn />
+      </Link>
+
+      {/* <DetailPage  {Element={apartment}} /> */}
+      {/* <div className='btn-container'>
+        <Link to={`/detail-page/${currentApartment.id} `}>
+        </Link>
+      </div> */}
     </section>
   );
 };

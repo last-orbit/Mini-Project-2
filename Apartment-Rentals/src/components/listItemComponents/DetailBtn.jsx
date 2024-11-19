@@ -3,9 +3,17 @@ import { Link } from "react-router-dom";
 
 const DetailBtn = () => {
   return (
-    <button className="btn-blue" title="Tell me more!">
+    <div>
+      <p>
       See more...
-    </button>
+
+      </p>
+</div>
+
+
+    // <button className="btn-blue" title="Tell me more!">
+    //   See more...
+    // </button>
 
 
   );

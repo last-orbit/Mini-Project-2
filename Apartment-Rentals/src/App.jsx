@@ -11,6 +11,7 @@ import ApartmentBase from "./assets/Data.json";
 import DetailPage from "./components/pages/DetailPage";
 import React, { useState } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
+import DetailBtn from "./components/listItemComponents/DetailBtn";
 
 const App = () => {
   const [apartments, setApartments] = useState(ApartmentBase.results);
