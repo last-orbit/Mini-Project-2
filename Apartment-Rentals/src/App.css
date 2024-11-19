@@ -48,6 +48,7 @@ nav img {
 /*Classes*/
 .sidebar {
   background-color: var(--darkBlue);
+
   color: white;
   text-align: center;
   padding: 10px;
@@ -169,7 +170,7 @@ nav img {
   position: absolute;
   top: 5px;
   right: 5px;
-
+  height: 40px;
   background-color: var(--darkBlue);
   opacity: 0.95;
   border-radius: 5px;
@@ -240,6 +241,24 @@ h5 {
   height: 40px;
   border: none;
   border-radius: 5px;
+}
+
+.availability {
+  color: white;
+  height: 30px;
+  margin: 10px;
+  padding: 5px 15px;
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  background-color: var(--darkBlue);
+  opacity: 0.95;
+  border-radius: 5px;
+}
+
+.availability i {
+  color: white;
+  font-size: 10px;
 }
 /*-------- LIST-ITEM ------------ */
 
@@ -484,7 +503,6 @@ a {
   color: var(--darkBlue);
 }
 
-
 /****************Detail Page********************/
 .detail-page {
   height: 85vh;
@@ -503,11 +521,9 @@ a {
   height: 35vh;
   object-fit: cover;
   border-radius: 10px 10px 0 0;
-
 }
 
-.detail-bth{
+.detail-bth {
   position: fixed;
   bottom: 40px;
 }
-

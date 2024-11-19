@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import ListItem from "../ListItem";
 
-const HomePage = ({ apartments, addToFav }) => {
+const HomePage = ({ apartments, addToFav, handleDelete }) => {
   // console.log(apartments);
 
   return (
@@ -11,7 +11,11 @@ const HomePage = ({ apartments, addToFav }) => {
         {apartments.map((apartment) => (
           <div key={apartment.id}>
             {/* <h1>{apartment.name}</h1> */}
-            <ListItem currentApartment={apartment} addToFav={addToFav} />
+            <ListItem
+              currentApartment={apartment}
+              addToFav={addToFav}
+              handleDelete={handleDelete}
+            />
           </div>
         ))}
       </div>

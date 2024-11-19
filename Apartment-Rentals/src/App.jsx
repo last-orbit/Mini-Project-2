@@ -18,7 +18,6 @@ const App = () => {
   const [favoriteFlats, setFavoriteFlats] = useState([]);
 
   //Submit Handler
-
   const handleAddApartment = (newApartment) => {
     setApartments((prev) => [...prev, newApartment]);
   };
@@ -30,6 +29,7 @@ const App = () => {
     const filteredFlats = apartments.filter((apartment) => {
       if (apartment.id === id) {
         // In that case it removes the fav from the array
+        apartment.favorite = true;
         favoriteFlat = apartment;
         return false;
       }
@@ -38,7 +38,22 @@ const App = () => {
     //Removing the flat from the main list
     setApartments(filteredFlats); // To see with Joshua change the button color instead of removing the item from the main list
     setFavoriteFlats([favoriteFlat, ...favoriteFlats]);
-    console.log(favoriteFlats);
+    console.log([favoriteFlat, ...favoriteFlats]);
+  }
+
+  //Delete a flat from the array
+  function handleDelete(apartmentToDelete) {
+    console.log("flat has been deleted", apartmentToDelete);
+    const filteredFlats = apartments.filter((oneApartment) => {
+      if (oneApartment.id !== apartmentToDelete) {
+        return true;
+      } else {
+        return false;
+      }
+    });
+    console.log(filteredFlats);
+    setApartments(filteredFlats);
+    console.log(apartments);
   }
 
   return (
@@ -49,7 +64,13 @@ const App = () => {
         <Routes>
           <Route
             path="/"
-            element={<HomePage apartments={apartments} addToFav={addToFav} />}
+            element={
+              <HomePage
+                apartments={apartments}
+                addToFav={addToFav}
+                handleDelete={handleDelete}
+              />
+            }
           />
           <Route
             path="/saved-flats"
@@ -63,7 +84,10 @@ const App = () => {
           />
           <Route path="/about-us" element={<About />} />
           <Route path="*" element={<NotFound />} />
-          <Route path="/detail-page/:apartmentId" element={<DetailPage apartments={apartments} />} />
+          <Route
+            path="/detail-page/:apartmentId"
+            element={<DetailPage apartments={apartments} />}
+          />
         </Routes>
       </section>
       <Footer />
