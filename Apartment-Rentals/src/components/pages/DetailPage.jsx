@@ -89,7 +89,12 @@ const DetailPage = ({ apartments, handleDelete, backHome }) => {
               </h4>
 
               <h4>
-                Review Score: <span>{foundApartment.review_scores_rating}</span>
+                Review Score:{' '}
+                <span>
+                  {foundApartment.review_scores_rating == null
+                    ? 'NA'
+                    : `${foundApartment.review_scores_rating}/5`}
+                </span>
               </h4>
               <h4>
                 Min Night: <span>{foundApartment.minimum_nights}</span>
