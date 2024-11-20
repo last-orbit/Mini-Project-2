@@ -12,6 +12,7 @@ import DetailPage from "./components/pages/DetailPage";
 import React, { useState } from "react";
 import { Route, Routes, useNavigate } from "react-router-dom";
 import DetailBtn from "./components/listItemComponents/DetailBtn";
+import UpdateFlat from "./components/pages/UpdateFlat";
 
 const App = () => {
   const [apartments, setApartments] = useState(ApartmentBase.results);
@@ -84,6 +85,15 @@ const App = () => {
           <Route
             path="/add-flats"
             element={<AddFlats handleAddApartment={handleAddApartment} />}
+          />
+          <Route
+            path="/update/:apartmentId"
+            element={
+              <UpdateFlat
+                apartments={apartments}
+                setApartments={setApartments}
+              />
+            }
           />
           <Route path="/about-us" element={<About />} />
           <Route path="*" element={<NotFound />} />

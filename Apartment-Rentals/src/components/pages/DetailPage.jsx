@@ -20,12 +20,20 @@ const DetailPage = ({ apartments, handleDelete }) => {
                 alt="Listing Image"
                 className="detail-image "
               />
+
+              <Link to={`/update/${foundApartment.id}`}>
+                <button
+                  className="btn-red"
+                  style={{ backgroundColor: "#384b70" }}
+                >
+                  <i class="fa-solid fa-pen-to-square"></i>Edit this flat
+                </button>
+              </Link>
               <button
                 className="btn-red"
                 onClick={() => handleDelete(foundApartment.id)}
               >
                 <i class="fa-solid fa-skull-crossbones"></i>Delete this flat
-                <i class="fa-solid fa-skull-crossbones"></i>
               </button>
             </div>
             <div className="col-2">
