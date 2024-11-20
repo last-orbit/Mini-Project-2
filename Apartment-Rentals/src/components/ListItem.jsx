@@ -18,7 +18,11 @@ const ListItem = ({ currentApartment, addToFav, handleDelete }) => {
               ? '$??'
               : `${currentApartment.price}`}
           </h4>
-          <h5>{currentApartment.review_scores_rating}/5</h5>
+          <h5>
+            {currentApartment.review_scores_rating == null
+              ? 'No Reviews'
+              : `${currentApartment.review_scores_rating}/5`}
+          </h5>
         </div>
         <div className='fav-btn'>
           <button
