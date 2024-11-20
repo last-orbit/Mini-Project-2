@@ -5,8 +5,9 @@ const NotFound = () => {
   return (
     <div className='not-found-page'>
       <h1>404 Not Found Page </h1>
-          <p>Oops, sorry, that page doesn&apos;t exist</p>
-          <Link to="/">Back to Home Page</Link>
+      <p>Pay no attention to our mess behind the curtain!</p>
+      <p>Remember there is no place like home 🏡</p>
+      <Link to='/'>Go Back Home</Link>
     </div>
   );
 };

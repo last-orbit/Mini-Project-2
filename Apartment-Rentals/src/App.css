@@ -53,7 +53,7 @@ nav img {
   text-align: center;
   padding: 10px;
   bottom: 40px;
-  width: 200px;
+  width: 170px;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -66,27 +66,39 @@ nav img {
   cursor: pointer;
 }
 .active {
-  text-decoration-line: underline;
+  text-decoration-line: underline!important;
   text-decoration-color: var(--red);
 }
 
 .sidebar-actions {
-  color: black;
-  text-decoration: none;
+  color: white;
+  text-decoration-line: none;
   width: 110px;
   position: fixed;
   display: flex;
-  flex-direction: column;
-  z-index: 10;
-  top: 80px;
 }
 
-NavLink {
-  color: var(--white);
-  text-decoration: none;
-  width: 110px;
-  position: fixed;
-  margin-top: 10px;
+#nav1{
+  top: 80px;
+  left: 35px;
+}
+
+#nav2{
+  top: 120px;
+  left: 20px;
+
+}
+
+#nav3{
+  top: 160px;
+  left: 30px;
+
+}
+
+#nav4{
+  top: 200px;
+  left: 32px;
+
 }
 
 
@@ -253,7 +265,7 @@ h5 {
   font-weight: 700;
   padding-top: 10px;
   padding-bottom: 10px;
-  margin-top: 20px;
+  margin: 20px 0;
   height: 40px;
   border: none;
   border-radius: 5px;
@@ -527,7 +539,7 @@ a {
   flex-direction: column;
   justify-content: center;
   color: var(--white);
-  width: 84%;
+  width: 85%;
   text-align: center;
   line-height: 30px;
 }
@@ -561,7 +573,7 @@ a {
   min-height: 85vh;
   display: flex;
   flex-direction: column;
-  width: 85%;
+  width: 87%;
   align-items: center;
   background-color: var(--grey);
 }
@@ -629,4 +641,10 @@ a {
 .detail-bth {
   position: fixed;
   bottom: 40px;
+}
+
+.saved-flats-text {
+  color: rgba(0, 0, 0, 0.546);
+  font-size: 1.2em;
+  text-transform: uppercase;
 }
