@@ -13,7 +13,9 @@ const ListItem = ({ currentApartment, addToFav, handleDelete }) => {
     <section className='list-item'>
       <div className='picture-container'>
         <div className='price-tag'>
-          <h4>{currentApartment.price}</h4>
+          <h4>
+            {currentApartment.price == null ? '$??' : `${currentApartment.price}`}
+          </h4>
           <h5>{currentApartment.review_scores_rating}/5</h5>
         </div>
         <div className='fav-btn'>
