@@ -1,7 +1,7 @@
-import React, { useNavigate } from "react";
-import { useParams, Link } from "react-router-dom";
+import React from "react";
+import { useParams, Link, useNavigate } from "react-router-dom";
 
-const DetailPage = ({ apartments, handleDelete, backHome }) => {
+const DetailPage = ({ apartments, setApartments }) => {
   const { apartmentId } = useParams();
   const foundApartment = apartments.find(
     (oneApartment) => oneApartment.id == apartmentId
@@ -89,10 +89,10 @@ const DetailPage = ({ apartments, handleDelete, backHome }) => {
               </h4>
 
               <h4>
-                Review Score:{' '}
+                Review Score:{" "}
                 <span>
                   {foundApartment.review_scores_rating == null
-                    ? 'NA'
+                    ? "NA"
                     : `${foundApartment.review_scores_rating}/5`}
                 </span>
               </h4>

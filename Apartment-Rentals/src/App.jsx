@@ -10,18 +10,19 @@ import NotFound from "./components/Pages/NotFound";
 import ApartmentBase from "./assets/Data.json";
 import DetailPage from "./components/pages/DetailPage";
 import React, { useState } from "react";
-import { BrowserRouter, Route, Routes, useNavigate } from "react-router-dom";
+import { Route, Routes, useNavigate } from "react-router-dom";
 import DetailBtn from "./components/listItemComponents/DetailBtn";
 
 const App = () => {
   const [apartments, setApartments] = useState(ApartmentBase.results);
   const [favoriteFlats, setFavoriteFlats] = useState([]);
-  //BackHome const to go back the home (used when delete)
-  const backHome = useNavigate();
   //Submit Handler
   const handleAddApartment = (newApartment) => {
     setApartments((prev) => [...prev, newApartment]);
   };
+
+  //Backhome
+  // const navigate = useNavigate();
 
   // Managing favorites
   function addToFav(id) {
@@ -55,11 +56,10 @@ const App = () => {
     console.log(filteredFlats);
     setApartments(filteredFlats);
     console.log(apartments);
-    backHome("/");
   }
 
   return (
-    <BrowserRouter>
+    <>
       <Navbar />
       <section className="hero">
         <Sidebar />
@@ -89,13 +89,16 @@ const App = () => {
           <Route
             path="/detail-page/:apartmentId"
             element={
-              <DetailPage apartments={apartments} handleDelete={handleDelete} />
+              <DetailPage
+                apartments={apartments}
+                setApartments={setApartments}
+              />
             }
           />
         </Routes>
       </section>
       <Footer />
-    </BrowserRouter>
+    </>
   );
 };
 
