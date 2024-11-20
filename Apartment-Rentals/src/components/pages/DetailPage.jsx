@@ -88,7 +88,7 @@ const DetailPage = ({ apartments, handleDelete }) => {
                 /Per Night
               </h4>
 
-              <h4>
+              <h4 id="score">
                 Review Score:{" "}
                 <span>
                   {foundApartment.review_scores_rating == null

@@ -58,8 +58,8 @@ const AddFlats = ({ handleAddApartment }) => {
   };
 
   return (
-    <div className="home-page main-container">
-      <div className="form-container">
+    <div className='home-page main-container'>
+      <div className='form-container'>
         <h1>Add a new appartement</h1>
         <p>
           Please fill the form to add a new appartement. If you want to add more
@@ -69,93 +69,93 @@ const AddFlats = ({ handleAddApartment }) => {
         <form onSubmit={handleSubmit}>
           <label>Flat's name</label>
           <input
-            type="text"
+            type='text'
             value={name}
             onChange={(event) => setName(event.target.value)}
-            placeholder="Lovely house in a fantastic square"
+            placeholder='Lovely house in a fantastic square'
             required
           />
           <label>Location</label>
           <input
-            type="text"
+            type='text'
             value={neighbourhood_cleansed}
             onChange={(event) => setNeighbourhoodCleansed(event.target.value)}
-            placeholder="Embajadores"
+            placeholder='Embajadores'
           />
           <label>Image</label>
           <input
-            type="url"
+            type='url'
             value={picture_url}
             onChange={(event) => setPicture(event.target.value)}
-            placeholder="Url please !"
+            placeholder='Url please !'
           />
-          <div className="form-number-container">
-            <div>
+          <div className='form-number-container'>
+            <div className='special-input'>
               <label>Number of guests</label>
               <input
-                type="number"
+                type='number'
                 min={1}
                 value={accommodates}
                 onChange={(event) => setAccommodates(event.target.value)}
-                placeholder="Just people sleeping"
+                placeholder='Just people sleeping'
               />
             </div>
-            <div>
+            <div className='special-input'>
               <label>Number of beds</label>
               <input
-                type="number"
+                type='number'
                 value={beds}
                 onChange={(event) => setBeds(event.target.value)}
                 placeholder="I won't sleep on the floor!"
                 min={1}
               />
             </div>
-            <div>
+            <div className='special-input'>
               <label>Number of bathrooms</label>
               <input
-                type="number"
+                type='number'
                 min={1}
                 value={bathrooms}
                 onChange={(event) => setBathrooms(event.target.value)}
-                placeholder="I love to sing naked"
+                placeholder='I love to sing naked'
               />
             </div>
           </div>
 
-          <div className="form-price-container">
+          <div className='form-price-container'>
             <div>
               <label>Price per night</label>
               <input
-                type="number"
+                type='number'
                 min={1}
                 value={price}
                 onChange={(event) => setPrice(event.target.value)}
-                placeholder="$0.00"
+                placeholder='$0.00'
               />
             </div>
             <div>
               <label>Reviews</label>
               <input
-                type="number"
+                type='number'
                 min={1}
                 max={5}
                 value={review_scores_rating}
-                placeholder="0 / 5"
+                placeholder='0 / 5'
                 onChange={(event) => setReviewScoresRating(event.target.value)}
               />
             </div>
             <span></span>
           </div>
-          <div className="form-checkbox-container">
+          <div className='form-checkbox-container'>
             <label>This flat is available</label>
             <input
-              type="checkbox"
+              type='checkbox'
               value={has_availability}
               onChange={(event) => setHasAvailability(event.target.value)}
             />
             {/* <span class="checkmark"> </span> */}
           </div>
-          <button className="btn-blue" type="submit">
+          <button className='btn-blue' type='submit'>
             Add this new flat!
           </button>
         </form>

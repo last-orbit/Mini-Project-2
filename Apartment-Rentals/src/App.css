@@ -24,7 +24,6 @@ h1 {
 nav {
   background-color: var(--darkBlue);
   color: white;
-  text-align: center;
   /* padding: 10px; */
   position: sticky;
   z-index: 1; /*position and z-index works but we will have to change the styling for both homepage*/
@@ -37,6 +36,7 @@ nav {
 nav img {
   width: 90px;
   height: 50px;
+  margin:  0 auto;
 }
 /*footer*/
 /*Id's*/
@@ -52,27 +52,43 @@ nav img {
   color: white;
   text-align: center;
   padding: 10px;
-  position: sticky;
   bottom: 40px;
   width: 200px;
   display: flex;
   flex-direction: column;
+  justify-content: space-around;
 }
 
 .sidebar button {
   padding: 10px;
-  text-transform: uppercase;
   font-size: 16px;
-  color: var(--white);
   background: none;
-  border: none;
   cursor: pointer;
 }
 .active {
-  text-decoration: underline;
-  background-color: var(--red);
+  text-decoration-line: underline;
   text-decoration-color: var(--red);
 }
+
+.sidebar-actions {
+  color: black;
+  text-decoration: none;
+  width: 110px;
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  z-index: 10;
+  top: 80px;
+}
+
+NavLink {
+  color: var(--white);
+  text-decoration: none;
+  width: 110px;
+  position: fixed;
+  margin-top: 10px;
+}
+
 
 .footer {
   background-color: var(--darkBlue);
@@ -92,7 +108,7 @@ nav img {
 }
 
 .main-container {
-  height: 85vh;
+  min-height: 85vh;
   background-color: var(--grey);
   width: 100%;
 }
@@ -411,7 +427,7 @@ a {
   text-align: left;
   font-size: 16px;
   font-weight: 600;
-  padding: 15px 0 5px 0;
+  padding: 15px 35px 5px 0;
 
   color: #384b70;
 }
@@ -428,14 +444,20 @@ a {
 }
 
 .form-number-container {
-  display: flex;
-  justify-content: space-between;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
 }
 
 .form-number-container div {
   display: flex;
-  flex-direction: column;
-  align-items: flex-start;
+}
+.special-input {
+  width: 80%;
+  padding: 12px 12px 12px 0;
+}
+.special-input label {
+  padding: 0 10px;
 }
 
 .form-price-container {
@@ -536,7 +558,7 @@ a {
 
 /****************Detail Page********************/
 .detail-page {
-  height: 85vh;
+  min-height: 85vh;
   display: flex;
   flex-direction: column;
   width: 85%;
@@ -544,11 +566,12 @@ a {
   background-color: var(--grey);
 }
 
+
 .detail-content {
   display: flex;
   justify-content: space-around;
   width: 100%;
-  height: 80vh;
+  min-height: 80vh;
 }
 
 .col-1 {
@@ -564,6 +587,7 @@ a {
 
 .col-2 {
   width: 55%;
+  margin-bottom: 70px;
 }
 
 .col-2 h4 {
@@ -599,6 +623,9 @@ a {
   border-radius: 3px;
 }
 
+#score {
+  line-height: 23px;
+}
 .detail-bth {
   position: fixed;
   bottom: 40px;
