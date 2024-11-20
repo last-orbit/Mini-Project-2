@@ -16,8 +16,8 @@ import DetailBtn from "./components/listItemComponents/DetailBtn";
 const App = () => {
   const [apartments, setApartments] = useState(ApartmentBase.results);
   const [favoriteFlats, setFavoriteFlats] = useState([]);
-  //Nav const to go back the home (used when delete)
-  // const nav = useNavigate();
+  //BackHome const to go back the home (used when delete)
+  const backHome = useNavigate();
   //Submit Handler
   const handleAddApartment = (newApartment) => {
     setApartments((prev) => [...prev, newApartment]);
@@ -55,7 +55,7 @@ const App = () => {
     console.log(filteredFlats);
     setApartments(filteredFlats);
     console.log(apartments);
-    // nav(`/`);
+    backHome("/");
   }
 
   return (

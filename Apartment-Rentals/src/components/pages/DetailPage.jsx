@@ -1,34 +1,34 @@
 import React, { useNavigate } from "react";
 import { useParams, Link } from "react-router-dom";
 
-const DetailPage = ({ apartments, handleDelete }) => {
+const DetailPage = ({ apartments, handleDelete, backHome }) => {
   const { apartmentId } = useParams();
   const foundApartment = apartments.find(
     (oneApartment) => oneApartment.id == apartmentId
   );
 
   return (
-    <div className='detail-page'>
+    <div className="detail-page">
       <h2>{foundApartment.name}</h2>
 
       {foundApartment ? (
         <>
-          <div className='detail-content'>
-            <div className='col-1'>
+          <div className="detail-content">
+            <div className="col-1">
               <img
                 src={foundApartment.picture_url}
-                alt='Listing Image'
-                className='detail-image '
+                alt="Listing Image"
+                className="detail-image "
               />
-              {/* <button
+              <button
                 className="btn-red"
                 onClick={() => handleDelete(foundApartment.id)}
               >
                 <i class="fa-solid fa-skull-crossbones"></i>Delete this flat
                 <i class="fa-solid fa-skull-crossbones"></i>
-              </button> */}
+              </button>
             </div>
-            <div className='col-2'>
+            <div className="col-2">
               <h4>Details:</h4>
               <p>{foundApartment.description}</p>
               <h4>Neighborhood Overview:</h4>
@@ -40,49 +40,49 @@ const DetailPage = ({ apartments, handleDelete }) => {
               <h4>Listing Type:</h4>
               <p>{foundApartment.property_type}</p>
               <h4>Room Details:</h4>
-              <div className='room-details'>
+              <div className="room-details">
                 <p>
-                  Accommodates:{' '}
+                  Accommodates:{" "}
                   <span>
                     {foundApartment.accommodates == null
-                      ? '?'
+                      ? "?"
                       : `${foundApartment.accommodates}`}
                   </span>
                 </p>
                 <p>
-                  Bedrooms:{' '}
+                  Bedrooms:{" "}
                   <span>
                     {foundApartment.bedrooms == null
-                      ? '?'
+                      ? "?"
                       : `${foundApartment.bedrooms}`}
                   </span>
                 </p>
                 <p>
-                  Beds:{' '}
+                  Beds:{" "}
                   <span>
                     {foundApartment.beds == null
-                      ? '?'
+                      ? "?"
                       : `${foundApartment.beds}`}
                   </span>
                 </p>
                 <p>
-                  Bathrooms:{' '}
+                  Bathrooms:{" "}
                   <span>
                     {foundApartment.bathrooms == null
-                      ? '?'
+                      ? "?"
                       : `${foundApartment.bathrooms}`}
                   </span>
                 </p>
               </div>
             </div>
 
-            <div className='col-3'>
+            <div className="col-3">
               <h4>
-                Price:{' '}
+                Price:{" "}
                 <span>
-                  {' '}
+                  {" "}
                   {foundApartment.price == null
-                    ? '$??'
+                    ? "$??"
                     : `${foundApartment.price}`}
                 </span>
                 /Per Night
@@ -97,7 +97,7 @@ const DetailPage = ({ apartments, handleDelete }) => {
               <h4>Hosted by:</h4>
               <h5>{foundApartment.host_name}</h5>
 
-              <Link to='/' className='detail-bth'>
+              <Link to="/" className="detail-bth">
                 Back to Home
               </Link>
             </div>
