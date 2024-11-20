@@ -10,31 +10,31 @@ const ListItem = ({ currentApartment, addToFav, handleDelete }) => {
   // console.log("##", currentApartment);
 
   return (
-    <section className="list-item">
-      <div className="picture-container">
-        <div className="price-tag">
+    <section className='list-item'>
+      <div className='picture-container'>
+        <div className='price-tag'>
           <h4>{currentApartment.price}</h4>
           <h5>{currentApartment.review_scores_rating}/5</h5>
         </div>
-        <div className="fav-btn">
+        <div className='fav-btn'>
           <button
-            className="btn-round"
-            title="I like it!"
+            className='btn-round'
+            title='I like it!'
             onClick={() => addToFav(currentApartment.id)}
           >
-            <i class="fa-solid fa-star"></i>
+            <i class='fa-solid fa-star'></i>
           </button>
         </div>
         {currentApartment.review_scores_rating > 4.9 && (
-          <label className="availability">
-            <i class="fa-solid fa-star"></i>
-            <i class="fa-solid fa-star"></i>
-            <i class="fa-solid fa-star"></i>
+          <label className='availability'>
+            <i class='fa-solid fa-star'></i>
+            <i class='fa-solid fa-star'></i>
+            <i class='fa-solid fa-star'></i>
           </label>
         )}
         <PictureCard currentApartment={currentApartment} />
       </div>
-      <div className="info-container">
+      <div className='info-container'>
         <h3>{currentApartment.name}</h3>
         <h4>
           {/* {currentApartment.neighbourhood},{" "}
@@ -42,28 +42,32 @@ const ListItem = ({ currentApartment, addToFav, handleDelete }) => {
           {currentApartment.neighbourhood_cleansed}
           {/* </span> */}
         </h4>
-        <div className="amenities-tag">
+        <div className='amenities-tag'>
           <label>
-            <i class="fa-solid fa-users"></i>
-            {currentApartment.accommodates}
+            <i class='fa-solid fa-users'></i>
+            {currentApartment.accommodates == null
+              ? '?'
+              : `${currentApartment.accommodates}`}
           </label>
           <label>
-            <i class="fa-solid fa-bed"></i>
-            {currentApartment.beds}
+            <i class='fa-solid fa-bed'></i>
+            {currentApartment.beds == null ? '?' : `${currentApartment.beds}`}
           </label>
           <label>
-            <i class="fa-solid fa-bath"></i>
-            {currentApartment.bathrooms}
+            <i class='fa-solid fa-bath'></i>
+            {currentApartment.bathrooms == null
+              ? '?'
+              : `${currentApartment.bathrooms}`}
           </label>
         </div>
       </div>
       <div>
         <button
-          className="btn-red"
+          className='btn-red'
           onClick={() => handleDelete(currentApartment.id)}
         >
-          <i class="fa-solid fa-skull-crossbones"></i>Delete this flat
-          <i class="fa-solid fa-skull-crossbones"></i>
+          <i class='fa-solid fa-skull-crossbones'></i>Delete this flat
+          <i class='fa-solid fa-skull-crossbones'></i>
         </button>
         <Link to={`/detail-page/${currentApartment.id}`}>
           <DetailBtn />
