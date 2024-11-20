@@ -1,7 +1,7 @@
 import React from "react";
-import { useParams, Link, useNavigate } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 
-const DetailPage = ({ apartments, setApartments }) => {
+const DetailPage = ({ apartments, handleDelete }) => {
   const { apartmentId } = useParams();
   const foundApartment = apartments.find(
     (oneApartment) => oneApartment.id == apartmentId

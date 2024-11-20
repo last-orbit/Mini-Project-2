@@ -22,7 +22,7 @@ const App = () => {
   };
 
   //Backhome
-  // const navigate = useNavigate();
+  const navigate = useNavigate();
 
   // Managing favorites
   function addToFav(id) {
@@ -56,6 +56,7 @@ const App = () => {
     console.log(filteredFlats);
     setApartments(filteredFlats);
     console.log(apartments);
+    navigate("/");
   }
 
   return (
@@ -89,10 +90,7 @@ const App = () => {
           <Route
             path="/detail-page/:apartmentId"
             element={
-              <DetailPage
-                apartments={apartments}
-                setApartments={setApartments}
-              />
+              <DetailPage apartments={apartments} handleDelete={handleDelete} />
             }
           />
         </Routes>

@@ -212,7 +212,7 @@ h5 {
 .btn-container {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   width: 100%;
 }
 
@@ -249,7 +249,7 @@ h5 {
   font-weight: 700;
   padding-top: 10px;
   padding-bottom: 10px;
-  width: 140px;
+  width: 250px;
   margin-left: 5px;
   margin-top: 20px;
   height: 40px;
