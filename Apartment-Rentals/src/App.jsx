@@ -18,7 +18,7 @@ const App = () => {
   const [favoriteFlats, setFavoriteFlats] = useState([]);
   //Submit Handler
   const handleAddApartment = (newApartment) => {
-    setApartments((prev) => [...prev, newApartment]);
+    setApartments((prev) => [newApartment, ...prev]);
   };
 
   //Backhome

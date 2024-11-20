@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { v4 as uuidv4 } from "uuid";
 
 const AddFlats = ({ handleAddApartment }) => {
@@ -12,14 +13,17 @@ const AddFlats = ({ handleAddApartment }) => {
   // Reviews =
   // has availability = has_availability
 
+  //Back home
+  const nav = useNavigate();
+
   const [name, setName] = useState("");
   const [neighbourhood_cleansed, setNeighbourhoodCleansed] = useState("");
   const [picture_url, setPicture] = useState("");
-  const [accommodates, setAccommodates] = useState(0);
-  const [beds, setBeds] = useState(0);
-  const [bathrooms, setBathrooms] = useState(0);
-  const [price, setPrice] = useState(0);
-  const [review_scores_rating, setReviewScoresRating] = useState(0);
+  const [accommodates, setAccommodates] = useState(null);
+  const [beds, setBeds] = useState(null);
+  const [bathrooms, setBathrooms] = useState(null);
+  const [price, setPrice] = useState(null);
+  const [review_scores_rating, setReviewScoresRating] = useState(null);
   const [has_availability, setHasAvailability] = useState(false);
 
   const handleSubmit = (event) => {
@@ -32,7 +36,7 @@ const AddFlats = ({ handleAddApartment }) => {
       beds: beds,
       picture_url: picture_url,
       bathrooms: bathrooms,
-      price: price,
+      price: `$${price}`,
       review_scores_rating: review_scores_rating,
       has_availability: has_availability,
     };
@@ -49,6 +53,8 @@ const AddFlats = ({ handleAddApartment }) => {
     setPrice("");
     setReviewScoresRating("");
     setHasAvailability("");
+
+    nav("/");
   };
 
   return (
@@ -91,7 +97,7 @@ const AddFlats = ({ handleAddApartment }) => {
                 min={1}
                 value={accommodates}
                 onChange={(event) => setAccommodates(event.target.value)}
-                placeholder="The more fools, the merrier"
+                placeholder="Just people sleeping"
               />
             </div>
             <div>
@@ -100,7 +106,7 @@ const AddFlats = ({ handleAddApartment }) => {
                 type="number"
                 value={beds}
                 onChange={(event) => setBeds(event.target.value)}
-                placeholder="Please don't make me sleep on the floor!"
+                placeholder="I won't sleep on the floor!"
                 min={1}
               />
             </div>
@@ -124,6 +130,7 @@ const AddFlats = ({ handleAddApartment }) => {
                 min={1}
                 value={price}
                 onChange={(event) => setPrice(event.target.value)}
+                placeholder="$0.00"
               />
             </div>
             <div>
@@ -133,6 +140,7 @@ const AddFlats = ({ handleAddApartment }) => {
                 min={1}
                 max={5}
                 value={review_scores_rating}
+                placeholder="0 / 5"
                 onChange={(event) => setReviewScoresRating(event.target.value)}
               />
             </div>
