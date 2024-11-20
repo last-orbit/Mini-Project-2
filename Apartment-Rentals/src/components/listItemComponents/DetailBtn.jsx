@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const DetailBtn = () => {
   return (
-    <div>
+    <div className="btn-detail">
       <button className="btn-blue" title="Tell me more!">
         See more...
       </button>

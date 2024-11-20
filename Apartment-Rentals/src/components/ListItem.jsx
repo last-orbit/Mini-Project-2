@@ -57,13 +57,12 @@ const ListItem = ({ currentApartment, addToFav, handleDelete }) => {
           </label>
         </div>
       </div>
-      <div>
+      <div className="btn-container">
         <button
           className="btn-red"
           onClick={() => handleDelete(currentApartment.id)}
         >
-          <i class="fa-solid fa-skull-crossbones"></i>Delete this flat
-          <i class="fa-solid fa-skull-crossbones"></i>
+          Delete this flat
         </button>
         <Link to={`/detail-page/${currentApartment.id}`}>
           <DetailBtn />
