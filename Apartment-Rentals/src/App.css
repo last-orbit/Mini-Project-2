@@ -36,7 +36,7 @@ nav {
 nav img {
   width: 90px;
   height: 50px;
-  margin:  0 auto;
+  margin: 0 auto;
 }
 /*footer*/
 /*Id's*/
@@ -66,7 +66,7 @@ nav img {
   cursor: pointer;
 }
 .active {
-  text-decoration-line: underline!important;
+  text-decoration-line: underline !important;
   text-decoration-color: var(--red);
 }
 
@@ -78,29 +78,25 @@ nav img {
   display: flex;
 }
 
-#nav1{
+#nav1 {
   top: 80px;
   left: 35px;
 }
 
-#nav2{
+#nav2 {
   top: 120px;
   left: 20px;
-
 }
 
-#nav3{
+#nav3 {
   top: 160px;
   left: 30px;
-
 }
 
-#nav4{
+#nav4 {
   top: 200px;
   left: 32px;
-
 }
-
 
 .footer {
   background-color: var(--darkBlue);
@@ -456,9 +452,9 @@ a {
 }
 
 .form-number-container {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
 .form-number-container div {
@@ -578,7 +574,6 @@ a {
   background-color: var(--grey);
 }
 
-
 .detail-content {
   display: flex;
   justify-content: space-around;
@@ -647,4 +642,16 @@ a {
   color: rgba(0, 0, 0, 0.546);
   font-size: 1.2em;
   text-transform: uppercase;
+}
+
+.links {
+  display: flex;
+  margin: 10px 80px 0 80px;
+}
+.Rob,
+.Fab {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 0 auto;
 }

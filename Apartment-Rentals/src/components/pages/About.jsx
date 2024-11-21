@@ -19,6 +19,20 @@ const About = () => {
           Github Page
         </Link>
       </p>
+      <div className='links'>
+        <div className='Rob'>
+          <Link to='https://github.com/last-orbit'>Rob's Personal GitHub</Link>
+          <Link to='https://www.linkedin.com/in/dev-ro/'>
+            Rob's LinkedIn Page
+          </Link>
+        </div>
+        <div className='Fab'>
+          <Link to='https://github.com/FabienDubin'>Fab's Personal GitHub</Link>
+          <Link to='https://www.linkedin.com/in/fabien-dubin-46ab121b/'>
+            Fab's LinkedIn Page
+          </Link>
+        </div>
+      </div>
     </div>
   );
 };
